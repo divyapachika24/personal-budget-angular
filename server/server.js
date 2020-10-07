@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const fs = require('fs');
+const cors = require('cors');
 'use strict';
 
-app.use('/', express.static('public'));
+app.use(cors());
+
+//app.use('/', express.static('public'));
 
 
 let rawdata = fs.readFileSync('fetchdata.json');
