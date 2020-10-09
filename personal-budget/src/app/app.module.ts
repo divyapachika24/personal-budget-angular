@@ -13,6 +13,11 @@ import { ArticleComponent } from './article/article.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { P404Component } from './p404/p404.component';
+import { Pied3Component } from './pied3/pied3.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { DataService } from './data.service';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -24,14 +29,17 @@ import { P404Component } from './p404/p404.component';
     ArticleComponent,
     AboutComponent,
     LoginComponent,
-    P404Component
+    P404Component,
+    Pied3Component,
+    BreadcrumbsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

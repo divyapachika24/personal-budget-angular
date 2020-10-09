@@ -10,6 +10,8 @@ import { Chart } from 'chart.js';
 })
 export class HomepageComponent implements OnInit {
 
+  constructor(private http: HttpClient) { }
+
   public dataSource = {
     datasets: [
         {
@@ -28,7 +30,6 @@ export class HomepageComponent implements OnInit {
     labels: []
 };
 
-  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
      this.http.get('http://localhost:3000/budget')
@@ -40,6 +41,7 @@ export class HomepageComponent implements OnInit {
     }
     });
   }
+
 
   createChart() {
     //var ctx = document.getElementById('myChart').getContext('2d');
